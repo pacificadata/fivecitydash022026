@@ -5,7 +5,7 @@ from pathlib import Path
 
 from streamlit.components.v1 import html
 
-GA_ID = "G-5LPCWEZNT3"  # replace with your real ID
+GA_ID = "G-5LPCWEZNT3"  
 
 html(
     f"""
