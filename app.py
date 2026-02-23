@@ -21,7 +21,7 @@ components.html(
       gtag('event', 'page_view');
     </script>
     """,
-    height=0,
+    unsafe_allow_javascript=True,
 )
 
 # --------------------------------------------------
