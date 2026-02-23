@@ -5,17 +5,17 @@ from pathlib import Path
 
 from streamlit.components.v1 import html
 
-GA_ID = "G-XXXXXXXXXX"  # replace with your real ID
+GA_ID = "G-5LPCWEZNT3"  # replace with your real ID
 
 html(
     f"""
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LPCWEZNT3"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){{dataLayer.push(arguments);}}
       gtag('js', new Date());
-      gtag('config', 'G-5LPCWEZNT3', {{ 'send_page_view': true }});
+      gtag('config', '{GA_ID}', {{ 'send_page_view': true }});
     </script>
     """,
     height=0,
