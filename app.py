@@ -17,6 +17,8 @@ components.html(
       function gtag(){{dataLayer.push(arguments);}}
       gtag('js', new Date());
       gtag('config', '{GA_ID}', {{ 'send_page_view': true }});
+      // Force a page_view (helps with SPA-like apps)
+      gtag('event', 'page_view');
     </script>
     """,
     height=0,
