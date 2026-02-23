@@ -15,7 +15,7 @@ html(
       window.dataLayer = window.dataLayer || [];
       function gtag(){{dataLayer.push(arguments);}}
       gtag('js', new Date());
-      gtag('config', '{GA_ID}', {{ 'send_page_view': true }});
+      gtag('config', 'G-5LPCWEZNT3', {{ 'send_page_view': true }});
     </script>
     """,
     height=0,
