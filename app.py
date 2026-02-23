@@ -3,6 +3,24 @@ import streamlit as st
 import altair as alt
 from pathlib import Path
 
+from streamlit.components.v1 import html
+
+GA_ID = "G-XXXXXXXXXX"  # replace with your real ID
+
+html(
+    f"""
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LPCWEZNT3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+      gtag('config', '{GA_ID}', {{ 'send_page_view': true }});
+    </script>
+    """,
+    height=0,
+)
+
 # --------------------------------------------------
 # App configuration
 # --------------------------------------------------
