@@ -10,15 +10,12 @@ GA_ID = "G-5LPCWEZNT3"  # replace with your real ID
 
 components.html(
     f"""
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){{dataLayer.push(arguments);}}
       gtag('js', new Date());
-      gtag('config', '{GA_ID}', {{ 'send_page_view': true }});
-      // Force a page_view (helps with SPA-like apps)
-      gtag('event', 'page_view');
+      gtag('config', '{GA_ID}', {{ debug_mode: true }});
     </script>
     """,
     unsafe_allow_javascript=True,
