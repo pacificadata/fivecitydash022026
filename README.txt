@@ -28,17 +28,17 @@ MAKE 'venv' folder (virtual env) PER PROJECT
 EXAMPLE:
 
 my_streamlit_app/
-├─ venv/                  # 가상환경
-├─ app.py                 # 메인 엔트리
-├─ pages/                 # 멀티페이지 앱
+├─ venv/                  # Environment
+├─ app.py                 # Main Entry
+├─ pages/                 # Multi-page app
 │   └─ dashboard.py
 ├─ data/                  # CSV / parquet / json
 │   └─ sales.csv
-├─ components/            # UI / 차트 함수
+├─ components/            # UI / Chart Func
 │   └─ kpi_cards.py
-├─ utils/                 # 로직 / 헬퍼
+├─ utils/                 # Logic/Helpers
 │   └─ loaders.py
-├─ assets/                # 이미지, 아이콘
+├─ assets/                # Images, Icons, etc
 │   └─ logo.png
 ├─ requirements.txt
 └─ README.md
