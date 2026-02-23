@@ -8,7 +8,7 @@ import streamlit.components.v1 as components
 
 GA_ID = "G-5LPCWEZNT3"  # replace with your real ID
 
-components.html(
+st.html(
     f"""
     <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
     <script>
