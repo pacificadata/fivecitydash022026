@@ -290,7 +290,7 @@ if multi_geo:
         ],
     ).properties(height=380)
 
-    st.altair_chart(value_line, use_container_width=True)
+    st.altair_chart(value_line, width="stretch")
 
     if show_yoy:
         st.caption("YoY is shown as a separate chart when comparing multiple geographies (for readability).")
@@ -305,7 +305,7 @@ if multi_geo:
             ],
         ).properties(height=260)
 
-        st.altair_chart(yoy_line, use_container_width=True)
+        st.altair_chart(yoy_line, width="stretch")
 
 else:
     value_line = base.mark_line().encode(
@@ -327,16 +327,16 @@ else:
             ],
         )
         layered = alt.layer(value_line, yoy_line).resolve_scale(y="independent").properties(height=420)
-        st.altair_chart(layered, use_container_width=True)
+        st.altair_chart(layered, width="stretch")
     else:
-        st.altair_chart(value_line.properties(height=420), use_container_width=True)
+        st.altair_chart(value_line.properties(height=420), width="stretch")
 
 # --------------------------------------------------
 # Data preview + download
 # --------------------------------------------------
 with st.expander("Show aggregated chart data"):
     cols = ["PERIOD_END"] + ([geo_col] if multi_geo else []) + ["value", "mom", "yoy"]
-    st.dataframe(chart_df[cols].sort_values(["PERIOD_END"] + ([geo_col] if multi_geo else [])), use_container_width=True)
+    st.dataframe(chart_df[cols].sort_values(["PERIOD_END"] + ([geo_col] if multi_geo else [])), width="stretch")
 
 st.download_button(
     "Download aggregated CSV",
