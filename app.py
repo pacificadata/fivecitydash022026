@@ -3,11 +3,12 @@ import streamlit as st
 import altair as alt
 from pathlib import Path
 
-from streamlit.components.v1 import html
+# G-TAG (GA)
+from streamlit.components.v1 import components
 
 GA_ID = "G-5LPCWEZNT3"  # replace with your real ID
 
-html(
+components.html(
     f"""
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
