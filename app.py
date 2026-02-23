@@ -4,7 +4,7 @@ import altair as alt
 from pathlib import Path
 
 # G-TAG (GA)
-from streamlit.components.v1 import components
+import streamlit.components.v1 as components
 
 GA_ID = "G-5LPCWEZNT3"  # replace with your real ID
 
